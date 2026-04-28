@@ -1,0 +1,100 @@
+@forward "base/tokens";
+@forward "base/transitions";
+@forward "base/resets";
+@forward "base/fonts";
+@use "sass:math";
+@use "adaptive" as *;
+
+@layer base {
+  @mixin px-to-vw($fontSize, $screenWidth) {
+    $vw: (math.div($fontSize, $screenWidth) * 100);
+
+    font-size: #{$vw}vw;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-feature-settings:
+      "liga" off,
+      "clig" off;
+
+    background: none;
+    border: unset;
+    outline: unset;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  sup,
+  sub {
+    top: initial;
+  }
+
+  html {
+    font-size: 16px;
+
+    @include desktop-s {
+      @include px-to-vw(16, 1440);
+    }
+
+    @include tablet {
+      @include px-to-vw(16, 768);
+    }
+
+    @include mobile {
+      @include px-to-vw(16, 375);
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+
+    color: var(--text-1);
+
+    font-family: Manrope, sans-serif;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    caret-color: var(--text-brand-primary);
+  }
+
+  *:focus-visible {
+    outline-color: var(--accent-primary);
+  }
+
+  html,
+  body {
+    background: var(--surface-1);
+
+    touch-action: manipulation;
+
+    font-feature-settings: "liga" off, "clig" off;
+  }
+
+  .lock {
+    overflow: hidden;
+  }
+
+  ::selection {
+    color: var(--text-brand-primary);
+
+    background: var(--surface-brand-secondary);
+  }
+
+  #teleports {
+    z-index: 9;
+
+    & > * {
+      pointer-events: auto;
+    }
+  }
+
+  .nuxt-icon {
+    margin-bottom: 0;
+  }
+}

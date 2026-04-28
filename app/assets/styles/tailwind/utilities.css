@@ -1,0 +1,5 @@
+@layer utilities {
+  .underline-auto {
+    text-underline-position: auto;
+  }
+}

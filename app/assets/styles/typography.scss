@@ -1,0 +1,344 @@
+$font-akzidenz: "AkzidenzGroteskPro", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+// Heading Akzidenz
+@mixin ha1-me {
+  font-weight: 500;
+  font-size: 44px;
+  font-family: $font-akzidenz;
+  line-height: 1.13em;
+}
+
+@mixin ha2-me {
+  font-weight: 500;
+  font-size: 32px;
+  font-family: $font-akzidenz;
+  line-height: 1.25em;
+}
+
+@mixin ha3-me {
+  font-weight: 500;
+  font-size: 28px;
+  font-family: $font-akzidenz;
+  line-height: 1.28em;
+}
+
+@mixin ha35-me {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: $font-akzidenz;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+
+@mixin ha4-me {
+  font-weight: 500;
+  font-size: 22px;
+  font-family: $font-akzidenz;
+  line-height: 1.36em;
+}
+
+@mixin ha5-me {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: $font-akzidenz;
+  line-height: 1.4em;
+}
+
+@mixin ha6-m {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: $font-akzidenz;
+  line-height: 1.2em;
+}
+
+@mixin ha7-m {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: $font-akzidenz;
+  line-height: 1.2em;
+}
+
+// Heading
+@mixin h1-s {
+  font-weight: 600;
+  font-size: 34px;
+  font-family: $font-inter;
+  line-height: 41px;
+}
+
+@mixin h1-b {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: $font-inter;
+  line-height: 41px;
+}
+
+@mixin h15-b {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2em;
+}
+
+@mixin h2-s {
+  font-weight: 600;
+  font-size: 30px;
+  font-family: $font-inter;
+  line-height: 36px;
+}
+
+@mixin h2-b {
+  font-weight: 700;
+  font-size: 30px;
+  font-family: $font-inter;
+  line-height: 36px;
+}
+
+@mixin h3-s {
+  font-weight: 600;
+  font-size: 26px;
+  font-family: $font-inter;
+  line-height: 32px;
+}
+
+@mixin h3-b {
+  font-weight: 700;
+  font-size: 26px;
+  font-family: $font-inter;
+  line-height: 32px;
+}
+
+@mixin h35-s {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: $font-inter;
+  line-height: 25px;
+}
+
+@mixin h4-s {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: $font-inter;
+  line-height: 25px;
+}
+
+@mixin h4-b {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: $font-inter;
+  line-height: 25px;
+}
+
+@mixin h5-s {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: $font-inter;
+  line-height: 25px;
+}
+
+@mixin h5-b {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: $font-inter;
+  line-height: 25px;
+}
+
+// Body
+@mixin b1-b {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-s {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-m {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-r {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-1-r {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-1-s {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: $font-inter;
+  line-height: 20px;
+}
+
+@mixin b1-2-r {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: $font-inter;
+  line-height: 28px;
+}
+
+@mixin b2-b {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin b2-s {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin b2-m {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin b2-r {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+// Captions
+@mixin c1-s {
+  font-weight: 600;
+  font-size: 13px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin c1-m {
+  font-weight: 500;
+  font-size: 13px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin c1-r {
+  font-weight: 400;
+  font-size: 13px;
+  font-family: $font-inter;
+  line-height: 18px;
+}
+
+@mixin c2-b {
+  font-weight: 700;
+  font-size: 12px;
+  font-family: $font-inter;
+  line-height: 16px;
+}
+
+@mixin c2-s {
+  font-weight: 600;
+  font-size: 12px;
+  font-family: $font-inter;
+  line-height: 16px;
+}
+
+@mixin c2-m {
+  font-weight: 500;
+  font-size: 12px;
+  font-family: $font-inter;
+  line-height: 16px;
+}
+
+@mixin c2-r {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: $font-inter;
+  line-height: 16px;
+}
+
+@mixin c3-s {
+  font-weight: 600;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 14px;
+}
+
+@mixin c3-m {
+  font-weight: 500;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 14px;
+}
+
+@mixin c3-r {
+  font-weight: 400;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 14px;
+}
+
+// Captions Caps
+@mixin cc1-s {
+  font-weight: 600;
+  font-size: 15px;
+  font-family: $font-inter;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@mixin cc2-m {
+  font-weight: 500;
+  font-size: 13px;
+  font-family: $font-inter;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@mixin cc3-s {
+  font-weight: 600;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@mixin cc3-b {
+  font-weight: 700;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+
+@mixin cc3-m {
+  font-weight: 500;
+  font-size: 10px;
+  font-family: $font-inter;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+// Max lines
+@mixin max-lines($var) {
+  display: -webkit-box;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $var;
+  -webkit-box-orient: vertical;
+}

@@ -7,11 +7,31 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:fix": "eslint ./app --fix",
+    "lint:style:fix": "stylelint \"app/**/*.{css,scss,vue}\" --cache --fix"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.4",
     "nuxt": "^4.4.2",
+    "tailwindcss": "^4.2.4",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxt/eslint-config": "^1.15.2",
+    "eslint": "^10.2.1",
+    "sass": "^1.99.0",
+    "stylelint": "^17.9.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-rational-order-fix": "^0.1.9",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^8.1.1",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,297 @@
+.ha1-me, .ha2-me, .ha3-me, .ha35-me, .ha4-me, .ha5-me, .ha6-m, .ha7-m {
+  font-family: AkzidenzGroteskPro, sans-serif;
+}
+
+.h1-s, .h1-b, .h2-s, .h2-b, .h3-s, .h3-b, .h35-s, .h4-s, .h4-b, .h5-s, .h5-b,
+.b1-b, .b1-s, .b1-m, .b1-r, .b1-1-r, .b1-1-s, .b1-2-r, .b2-b, .b2-s, .b2-m, .b2-r,
+.c1-s, .c1-m, .c1-r, .c2-b, .c2-s, .c2-m, .c2-r, .c3-s, .c3-m, .c3-r,
+.cc1-s, .cc2-m, .cc3-s, .cc3-b, .cc3-m {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
+@utility ha1-me {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.13em;
+}
+
+@utility ha2-me {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25em;
+}
+
+@utility ha3-me {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.28em;
+}
+
+@utility ha35-me {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+
+@utility ha4-me {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.36em;
+}
+
+@utility ha5-me {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+@utility ha6-m {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+@utility ha7-m {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+@utility h1-s {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+@utility h1-b {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+@utility h2-s {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+@utility h2-b {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+
+@utility h3-s {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+@utility h3-b {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+@utility h35-s {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 25px;
+}
+
+@utility h4-s {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@utility h4-b {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@utility h5-s {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@utility h5-b {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@utility b1-b {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@utility b1-s {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@utility b1-m {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@utility b1-r {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@utility b1-1-r {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@utility b1-1-s {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@utility b1-2-r {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@utility b2-b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@utility b2-s {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@utility b2-m {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@utility b2-r {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@utility c1-s {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@utility c1-m {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@utility c1-r {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@utility c2-b {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@utility c2-s {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@utility c2-m {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@utility c2-r {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@utility c3-s {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+@utility c3-m {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+@utility c3-r {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+@utility cc1-s {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@utility cc2-m {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@utility cc3-s {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@utility cc3-b {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+
+@utility cc3-m {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@utility max-lines-* {
+  display: -webkit-box;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: --value(integer);
+  -webkit-box-orient: vertical;
+}

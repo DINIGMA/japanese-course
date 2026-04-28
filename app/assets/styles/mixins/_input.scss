@@ -1,0 +1,124 @@
+@use '../typography' as t;
+
+// Base input container
+@mixin input-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+
+  overflow: hidden;
+
+  background-color: var(--surface-3);
+  border: 1px solid transparent;
+  border-radius: 12px;
+
+  transition: border-color 0.2s ease;
+
+  &_disabled {
+    background-color: var(--surface-4);
+    cursor: not-allowed;
+  }
+
+  &_disabled &__placeholder {
+    color: var(--text-3);
+
+    &_required::after {
+      display: none;
+    }
+  }
+
+  &_size {
+    &_xs {
+      min-height: 36px;
+    }
+
+    &_s {
+      min-height: 40px;
+    }
+
+    &_m {
+      height: 44px;
+      min-height: 44px;
+    }
+
+    &_l {
+      min-height: 52px;
+    }
+  }
+}
+
+// Base field styles
+@mixin input-field {
+  &__field {
+    flex: 1;
+
+    color: var(--text-1);
+
+    background: none;
+    outline: none;
+
+    @include t.b2-m;
+  }
+}
+
+// Error handling
+@mixin input-error {
+  &_error {
+    border-color: var(--error);
+  }
+}
+
+@mixin input-placeholder-top {
+  top: 9px;
+
+  color: var(--text-3);
+
+  @include t.c2-r;
+
+  span {
+    opacity: 1;
+  }
+}
+
+// Placeholder styles
+@mixin input-placeholder {
+  &__placeholder {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+
+    color: var(--text-2);
+
+    transition: 0.2s ease;
+    transition-property: font-size, color, top;
+
+    pointer-events: none;
+
+    @include t.b2-m;
+
+    &_top {
+      @include input-placeholder-top;
+    }
+
+    &_required::after {
+      color: var(--text-brand-primary);
+
+      content: '*';
+    }
+  }
+}
+
+// Обязателен порядок:
+// input-container
+// input-field
+// input-error
+// input-placeholder
+@mixin input-base {
+  @include input-container;
+  @include input-field;
+  @include input-error;
+  @include input-placeholder;
+}

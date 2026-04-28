@@ -1,0 +1,10 @@
+@custom-variant min-desktop-xl (@media (min-width: 1921px));
+@custom-variant desktop-only (@media (min-width: 1200px));
+@custom-variant desktop-s (@media (max-width: 1439px));
+@custom-variant tablet-min (@media (min-width: 640px));
+@custom-variant tablet-only (@media (min-width: 640px) and (max-width: 1199px));
+@custom-variant tablet (@media (max-width: 1199px));
+@custom-variant mobile (@media (max-width: 639px));
+
+
+

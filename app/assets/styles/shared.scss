@@ -1,0 +1,76 @@
+@use "typography" as t;
+@use "adaptive" as a;
+
+@mixin hover {
+  @media (hover: none) {
+    -webkit-tap-highlight-color: #00000000;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin base-container {
+  width: 100%;
+  max-width: 1580px;
+  margin-inline: auto;
+
+  padding-inline: 32px;
+
+  @include a.mobile {
+    padding-inline: 0;
+  }
+}
+
+@mixin modal-wrapper {
+  position: fixed;
+
+  display: flex;
+
+  width: auto;
+  height: auto;
+  padding: 40px;
+  overflow-y: auto;
+
+  background-color: #21212180;
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+  will-change: opacity;
+
+  inset: 0;
+
+  @include a.mobile {
+    padding: 180px 0 0;
+  }
+}
+
+@mixin aspect-ratio($width, $aspect-ratio-w, $aspect-ratio-h) {
+  width: $width;
+  height: calc(#{$width} / (#{$aspect-ratio-w} / #{$aspect-ratio-h}));
+  aspect-ratio: #{$aspect-ratio-w}/#{$aspect-ratio-h};
+}
+
+@mixin ignore-padding-inline($padding-inline) {
+  margin-inline: -#{$padding-inline};
+  padding-inline: #{$padding-inline};
+}
+
+@function token-opacity($token, $opacity) {
+  @return rgb(from $token r g b / $opacity);
+}
+
