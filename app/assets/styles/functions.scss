@@ -10,6 +10,6 @@
   @return $string;
 }
 
-@function colorAlpha($color, $opacity) {
+@function color-alpha($color, $opacity) {
   @return rgb(from $color r g b / $opacity);
 }

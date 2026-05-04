@@ -12,6 +12,14 @@ export default defineNuxtConfig({
     '~/assets/styles/tailwind/index.css',
     '~/assets/styles/global.scss',
   ],
+
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL || '',
+      supabaseKey: process.env.SUPABASE_KEY || '',
+    },
+  },
+
   compatibilityDate: '2025-07-15',
 
   vite: {
