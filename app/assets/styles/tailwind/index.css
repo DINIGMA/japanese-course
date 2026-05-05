@@ -1,5 +1,6 @@
 /* Lib */
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 /* Modules */
 @import "./adaptive.css";

@@ -1,19 +1,17 @@
 <script setup lang="ts">
-const { fetch, posts, loading } = usePosts();
+const { fetch } = usePosts();
 
 onMounted(fetch);
 </script>
 
 <template>
   <div>
-    <h3 class="text-3xl ">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      A ab beatae corporis culpa cum, delectus est eum expedita illum iste minus nesciunt odit, placeat,
-      quia quisquam repellendus ullam vitae voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem cupiditate deserunt dolore dolores eaque error exercitationem laboriosam,
-      nihil possimus quam soluta suscipit tenetur ullam, vel veritatis voluptatibus. Obcaecati, sapiente!
-    </h3>
-    <p>dfsdsdd</p>
-    <p>{{ posts }}</p>
-    <span>{{ loading }}</span>
+    <UTooltip text="Open on GitHub">
+      <UButton
+        label="Open"
+        color="neutral"
+        variant="subtle"
+      />
+    </UTooltip>
   </div>
 </template>

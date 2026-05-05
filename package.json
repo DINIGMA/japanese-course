@@ -12,12 +12,14 @@
     "lint:style:fix": "stylelint \"app/**/*.{css,scss,vue}\" --cache --fix"
   },
   "dependencies": {
+    "@nuxt/ui": "^4.7.1",
     "@supabase/supabase-js": "^2.105.1",
     "@tailwindcss/vite": "^4.2.4",
     "nuxt": "^4.4.2",
     "tailwindcss": "^4.2.4",
     "vue": "^3.5.33",
-    "vue-router": "^5.0.6"
+    "vue-router": "^5.0.6",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
