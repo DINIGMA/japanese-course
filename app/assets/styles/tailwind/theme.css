@@ -61,6 +61,7 @@
 
   /* === SEMANTIC (same logic as SCSS) === */
 
+  --color-primary: var(--color-red-500);
   --color-accent-primary: var(--color-red-500);
   --color-accent-primary-hover: var(--color-red-600);
   --color-accent-primary-pressed: var(--color-red-700);

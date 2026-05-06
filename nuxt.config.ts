@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     '~/assets/styles/global.scss',
   ],
 
+  ui: {
+    colorMode: false,
+  },
+
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL || '',
@@ -25,6 +29,13 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      target: 'es2015',
+    },
   },
 
+  typescript: {
+    strict: true,
+    includeWorkspace: true,
+  },
 });
