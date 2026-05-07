@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div>login</div>
+  <div class="h-screen flex relative px-5 mobile:px-4">
+    <auth-screens-login />
+  </div>
 </template>

@@ -8,10 +8,14 @@ onMounted(fetch);
   <div>
     <UTooltip text="Open on GitHub">
       <UButton
-        label="Open"
-        color="neutral"
-        variant="subtle"
-      />
+        icon="i-lucide-rocket"
+        size="md"
+        color="primary"
+        variant="solid"
+      >
+        Button
+      </UButton>
+      <UIcon name="i-lucide-lightbulb" class="size-5" />
     </UTooltip>
   </div>
 </template>
