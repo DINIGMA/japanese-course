@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { fetch } = usePosts();
-
-onMounted(fetch);
+const { user } = useAuth();
 </script>
 
 <template>
@@ -17,5 +15,6 @@ onMounted(fetch);
       </UButton>
       <UIcon name="i-lucide-lightbulb" class="size-5" />
     </UTooltip>
+    <p v-if="user">{{ user }}</p>
   </div>
 </template>
