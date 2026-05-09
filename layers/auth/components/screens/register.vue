@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { object, string, type InferType, ref as yupRef } from 'yup';
+import {registerSchema, type TRegisterSchema} from '@layers/auth/shared/schemas'
 import type { FormSubmitEvent } from '@nuxt/ui';
 
 const state = reactive({
@@ -12,17 +12,7 @@ const state = reactive({
 
 const { register, loading } = useAuth();
 
-const schema = object({
-  name: string().required('Введите имя').min(3, 'Минимум 3 символа'),
-  email: string().required('Email обязателен').email('Введите корректный email'),
-  password: string().required('Введите пароль').min(8, 'Пароль должен быть минимум 8 символов'),
-  confirmPassword: string()
-    .required('Подтвердите пароль')
-    .oneOf([yupRef('password')], 'Пароли не совпадают'),
-  level: string(),
-});
-
-async function onSubmit(event: FormSubmitEvent<InferType<typeof schema>>) {
+async function onSubmit(event: FormSubmitEvent<TRegisterSchema>) {
   try {
     await register({
       email: event.data.email,
@@ -59,7 +49,7 @@ async function onSubmit(event: FormSubmitEvent<InferType<typeof schema>>) {
 
       <UForm
         :validate-on="[]"
-        :schema="schema"
+        :schema="registerSchema"
         :state="state"
         class="space-y-4"
         @submit="onSubmit"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { object, string, type InferType } from 'yup';
+import {loginSchema, type TLoginSchema} from "@layers/auth/shared/schemas";
 import type { FormSubmitEvent } from '@nuxt/ui';
 
 const toast = useToast();
@@ -11,17 +11,8 @@ const state = reactive({
   password: '',
 });
 
-const schema = object({
-  email: string()
-    .required('Email обязателен')
-    .email('Введите корректный email'),
-
-  password: string()
-    .required('Введите пароль'),
-});
-
 async function onSubmit(
-  event: FormSubmitEvent<InferType<typeof schema>>,
+  event: FormSubmitEvent<TLoginSchema>,
 ) {
   try {
     await login({
@@ -57,7 +48,7 @@ async function onSubmit(
 
       <UForm
         :validate-on="[]"
-        :schema="schema"
+        :schema="loginSchema"
         :state="state"
         class="space-y-4"
         @submit="onSubmit"

@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath } from 'node:url';
 
 export default defineNuxtConfig({
 
@@ -24,6 +25,12 @@ export default defineNuxtConfig({
       supabaseKey: process.env.SUPABASE_KEY || '',
     },
   },
+
+  alias: {
+    '@layers': fileURLToPath(new URL('./layers', import.meta.url)),
+  },
+
+
 
   compatibilityDate: '2026-05-07',
 
