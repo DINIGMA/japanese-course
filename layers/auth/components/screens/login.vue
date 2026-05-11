@@ -34,7 +34,7 @@ async function onSubmit(
 
 <template>
   <div class="flex-1 flex items-center justify-center">
-    <UCard
+    <u-card
       :class="[
         'w-120 shadow-2xl',
         'tablet:w-100',
@@ -75,7 +75,7 @@ async function onSubmit(
         </p>
       </div>
 
-      <UForm
+      <u-form
         :validate-on="[]"
         :schema="loginSchema"
         :state="state"
@@ -87,49 +87,49 @@ async function onSubmit(
             'mobile:px-2',
           ]"
         >
-          <UFormField
+          <u-form-field
             name="email"
             label="Email"
           >
-            <UInput
+            <u-input
               v-model="state.email"
               class="w-full"
               placeholder="your@email.com"
               icon="i-lucide-mail"
             />
-          </UFormField>
+          </u-form-field>
 
-          <UFormField name="password" label="Пароль">
-            <UInput
+          <u-form-field name="password" label="Пароль">
+            <u-input
               v-model="state.password"
               class="w-full"
               type="password"
               placeholder="********"
               icon="i-heroicons-lock-closed"
             />
-          </UFormField>
+          </u-form-field>
 
-          <UButton
+          <u-button
             type="submit"
             color="primary"
             block
-            size="lg"
+            size="md"
             class="mt-4"
             :loading="loading"
           >
             Войти
-          </UButton>
+          </u-button>
         </div>
 
         <p class="text-center b2-m text-gray-600 mt-4">
           Нету аккаунта?
           <nuxt-link to="/register" class="inline-block text-brand-600 hover:text-brand-700 font-medium text-accent-primary">Зарегистрироваться</nuxt-link>
         </p>
-      </UForm>
+      </u-form>
 
       <div class="mt-6 text-center text-xs text-gray-400">
         <p class="ha7-m">毎日少しずつ — <span class="b2-m">Майнити сукозудзу — Каждый день понемногу</span></p>
       </div>
-    </UCard>
+    </u-card>
   </div>
 </template>

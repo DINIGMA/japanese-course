@@ -73,12 +73,180 @@ export default defineAppConfig({
       defaultVariants: {
         color: 'primary',
         variant: 'solid',
+        size: 'lg',
       },
+
+      slots: {
+        base: [
+          'inline-flex items-center justify-center gap-2 rounded-xl b2-m!',
+          'transition-colors duration-200',
+          'disabled:opacity-50 disabled:cursor-not-allowed',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+        ],
+      },
+
+      variants: {
+        color: {
+          primary: '',
+          secondary: '',
+          neutral: '',
+          success: '',
+          warning: '',
+          error: '',
+        },
+
+        variant: {
+          solid: '',
+          outline: '',
+          ghost: '',
+          soft: '',
+          link: '',
+        },
+
+        size: {
+          xs: {
+            base: 'px-2 py-1',
+          },
+          sm: {
+            base: 'px-3 py-1.5',
+          },
+          md: {
+            base: 'px-4 py-2',
+          },
+          lg: {
+            base: 'px-5 py-3',
+          },
+          xl: {
+            base: 'px-6 py-4',
+          },
+        },
+      },
+
       compoundVariants: [
+        {
+          color: 'primary',
+          variant: 'solid',
+          class: 'bg-button-primary-default text-base-white hover:bg-button-primary-hover! active:bg-accent-primary-pressed!',
+        },
+        {
+          color: 'primary',
+          variant: 'outline',
+          class: 'border border-button-primary-default text-button-primary-default hover:bg-surface-brand-primary',
+        },
+        {
+          color: 'primary',
+          variant: 'ghost',
+          class: 'text-button-primary-default hover:bg-surface-brand-primary',
+        },
+        {
+          color: 'primary',
+          variant: 'soft',
+          class: 'bg-surface-brand-primary text-button-primary-default hover:bg-surface-brand-secondary',
+        },
+        {
+          color: 'primary',
+          variant: 'link',
+          class: 'text-button-primary-default underline-offset-4 hover:underline',
+        },
+
+        {
+          color: 'neutral',
+          variant: 'solid',
+          class: 'bg-neutral-900 text-base-white hover:bg-neutral-700',
+        },
+        {
+          color: 'neutral',
+          variant: 'outline',
+          class: 'border border-neutral-300 text-text-1 hover:bg-surface-2',
+        },
         {
           color: 'neutral',
           variant: 'ghost',
-          class: '[color:var(--color-icon-1)] hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated',
+          class: 'text-icon-1 hover:bg-surface-2',
+        },
+        {
+          color: 'neutral',
+          variant: 'soft',
+          class: 'bg-surface-2 text-text-1 hover:bg-surface-3)]',
+        },
+        {
+          color: 'neutral',
+          variant: 'link',
+          class: 'text-text-2 hover:text-text-1 underline',
+        },
+
+        {
+          color: 'success',
+          variant: 'solid',
+          class: 'bg-success text-white hover:brightness-110',
+        },
+        {
+          color: 'success',
+          variant: 'outline',
+          class: 'border border-success text-success',
+        },
+
+        {
+          color: 'warning',
+          variant: 'solid',
+          class: 'bg-warning text-white',
+        },
+        {
+          color: 'warning',
+          variant: 'outline',
+          class: 'border border-warning text-warning',
+        },
+
+        {
+          color: 'error',
+          variant: 'solid',
+          class: 'bg-error text-white',
+        },
+        {
+          color: 'error',
+          variant: 'outline',
+          class: 'border border-error text-error',
+        },
+
+        {
+          size: 'xs',
+          square: true,
+          class: 'p-1',
+        },
+        {
+          size: 'sm',
+          square: true,
+          class: 'p-1.5',
+        },
+        {
+          size: 'md',
+          square: true,
+          class: 'p-1.5',
+        },
+        {
+          size: 'lg',
+          square: true,
+          class: 'p-2',
+        },
+        {
+          size: 'xl',
+          square: true,
+          class: 'py-2 px-4',
+        },
+        {
+          loading: true,
+          leading: true,
+          class: {
+            leadingIcon: 'animate-spin',
+          },
+        },
+        {
+          loading: true,
+          leading: false,
+          trailing: true,
+          class: {
+            trailingIcon: 'animate-spin',
+          },
         },
       ],
     },
