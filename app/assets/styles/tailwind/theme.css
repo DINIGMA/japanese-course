@@ -1,7 +1,7 @@
 @theme {
   /* Fonts */
-  --font-akzidenz: "AkzidenzGroteskPro", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --font-noto:  "NotoSansJP", sans-serif;
 
   /* Breakpoint */
   --breakpoint-*: initial;

@@ -78,7 +78,7 @@ export default defineAppConfig({
 
       slots: {
         base: [
-          'inline-flex items-center justify-center gap-2 rounded-xl b2-m!',
+          'inline-flex items-center justify-center gap-2 rounded-3xl b2-m',
           'transition-colors duration-200',
           'disabled:opacity-50 disabled:cursor-not-allowed',
           'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',

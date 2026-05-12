@@ -7,7 +7,7 @@
       <organisms-lending-header class="px-4" />
     </div>
 
-    <main class="isolate mx-auto flex w-full flex-1 flex-col">
+    <main class="isolate mx-auto flex w-full max-w-470 flex-1 flex-col mt-20">
       <slot />
     </main>
   </div>
