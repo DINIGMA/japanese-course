@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxt/eslint',
+    'nuxt-viewport',
   ],
 
   devtools: { enabled: true },
@@ -30,8 +31,6 @@ export default defineNuxtConfig({
     '@layers': fileURLToPath(new URL('./layers', import.meta.url)),
   },
 
-
-
   compatibilityDate: '2026-05-07',
 
   vite: {
@@ -49,5 +48,14 @@ export default defineNuxtConfig({
   icon: {
     mode: 'svg',
     serverBundle: 'auto',
+  },
+
+  viewport: {
+    breakpoints: {
+      mobile: 0,
+      tablet: 640,
+      desktop: 1200,
+      'desktop-l': 1440,
+    },
   },
 });
