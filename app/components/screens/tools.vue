@@ -8,6 +8,7 @@
       :class="[
         'font-bold text-[48px]/[1.2em] text-center',
         'tablet:text-[32px]',
+        'mobile:text-[28px]',
       ]"
     >
       Всё, что вам нужно
@@ -16,6 +17,7 @@
       :class="[
         'font-medium text-[20px]/[1.2em] text-center text-text-3 mt-3',
         'tablet:text-[18px] tablet:mt-2',
+        'mobile:text-[16px] mobile:mt-1',
       ]"
     >
       Комплексная платформа, разработанная для того, чтобы помочь вам пройти путь от новичка до свободного владения языком.
@@ -24,13 +26,14 @@
     <div
       :class="[
         'grid grid-cols-3 gap-10 mt-10',
-        'tablet:gap-5 tablet:mt-8',
+        'tablet:gap-5 tablet:grid-cols-2 tablet:mt-8',
+        'mobile:gap-4 mobile:grid-cols-1 mobile:mt-7',
       ]"
     >
       <article
         :class="[
           'bg-base-white rounded-2xl shadow-xl flex flex-col items-start px-7 h-70 py-9',
-          'tablet:h-65 tablet:px-5 tablet:py-7',
+          'tablet:h-auto tablet:px-5 tablet:py-7',
         ]"
       >
         <div
@@ -67,7 +70,7 @@
       <article
         :class="[
           'bg-base-white rounded-2xl shadow-xl flex flex-col items-start px-7 h-70 py-9',
-          'tablet:h-65 tablet:px-5 tablet:py-7',
+          'tablet:h-auto tablet:px-5 tablet:py-7',
         ]"
       >
         <div
@@ -104,7 +107,7 @@
       <article
         :class="[
           'bg-base-white rounded-2xl shadow-xl flex flex-col items-start px-7 h-70 py-9',
-          'tablet:h-65 tablet:px-5 tablet:py-7',
+          'tablet:h-auto tablet:px-5 tablet:py-7',
         ]"
       >
         <div

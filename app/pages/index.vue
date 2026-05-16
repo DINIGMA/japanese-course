@@ -12,6 +12,7 @@ definePageMeta({
       :class="[
         'mt-30!',
         'tablet:mt-20!',
+        'mobile:mt-15!',
       ]"
     />
 
@@ -19,6 +20,7 @@ definePageMeta({
       :class="[
         'mt-30!',
         'tablet:mt-20!',
+        'mobile:mt-15!',
       ]"
     />
   </div>
