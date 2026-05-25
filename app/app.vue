@@ -3,9 +3,9 @@ import { ru } from '@nuxt/ui/locale';
 </script>
 
 <template>
-  <UApp :locale="ru" :tooltip="{ delayDuration: 100 }">
+  <u-app :locale="ru">
     <nuxt-layout>
       <nuxt-page />
     </nuxt-layout>
-  </UApp>
+  </u-app>
 </template>

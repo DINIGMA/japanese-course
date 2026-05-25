@@ -2,8 +2,11 @@
 @forward "base/transitions";
 @forward "base/resets";
 @forward "base/fonts";
+@forward "tailwind/index.css";
 @use "sass:math";
 @use "adaptive" as *;
+
+// tailwind
 
 @layer base {
   @mixin px-to-vw($fontSize, $screenWidth) {

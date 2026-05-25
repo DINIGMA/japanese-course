@@ -1,12 +1,11 @@
-import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
 
 export default defineNuxtConfig({
 
   modules: [
-    '@nuxt/ui',
     '@nuxt/eslint',
     'nuxt-viewport',
+    '@nuxt/ui',
   ],
 
   devtools: { enabled: true },
@@ -34,7 +33,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-05-07',
 
   vite: {
-    plugins: [tailwindcss()],
     build: {
       target: 'es2015',
     },
