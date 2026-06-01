@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     '@layers': fileURLToPath(new URL('./layers', import.meta.url)),
   },
 
-  compatibilityDate: '2026-05-07',
+  // compatibilityDate: '2026-05-07',
 
   vite: {
     build: {

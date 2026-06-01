@@ -3,19 +3,19 @@ const isOpen = ref(true);
 
 const navItems = [
   {
-    label: 'Dashboard',
-    icon: 'i-lucide-house',
-    to: '/',
+    label: 'Дашборд',
+    icon: 'i-lucide-layout-dashboard',
+    to: '/dashboard',
   },
   {
-    label: 'Settings',
-    icon: 'i-lucide-settings',
-    to: '/',
+    label: 'Словарь',
+    icon: 'i-lucide-book-text',
+    to: '/vocabulary',
   },
   {
-    label: 'Profile',
+    label: 'Профиль',
     icon: 'i-lucide-user',
-    to: '/',
+    to: '/profile',
   },
 ];
 
@@ -25,16 +25,28 @@ defineShortcuts({
 </script>
 
 <template>
-  <div class="flex h-svh">
+  <div class="flex h-svh overflow-hidden">
     <u-sidebar
       v-model:open="isOpen"
-      title="My App"
       collapsible="icon"
       close
       close-icon
       variant="sidebar"
       rail
     >
+      <template #header="{ state, close }">
+        <div class="flex items-center justify-between w-full py-5">
+          <atoms-logo :size="adaptiveValue({ d: 'm', t: 's' })" />
+
+          <u-icon
+            v-if="state === 'expanded'"
+            name="i-lucide-x"
+            class="size-6 tablet:size-5 cursor-pointer hover:text-text-2"
+            @click="close"
+          />
+        </div>
+      </template>
+
       <u-navigation-menu
         orientation="vertical"
         :items="navItems"
@@ -49,9 +61,9 @@ defineShortcuts({
       </template>
     </u-sidebar>
 
-    <main class="flex-1 min-h-0">
-      <header class="flex items-center gap-3 px-4 h-16 border-b border-default">
-        <UButton
+    <div class="flex flex-col flex-1 min-h-0">
+      <header class="flex bg-base-white items-center gap-3 px-4 h-16 border-b border-default">
+        <u-button
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"
@@ -60,9 +72,9 @@ defineShortcuts({
         <slot name="header" />
       </header>
 
-      <div class="p-6">
+      <main class="flex-1 min-h-0 overflow-y-auto p-6">
         <slot />
-      </div>
-    </main>
+      </main>
+    </div>
   </div>
 </template>
